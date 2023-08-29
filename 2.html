@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        .container{
+            margin: 20% 0 0 20%;
+            background: linear-gradient(pink,yellow);
+            width: 600px;
+            height: 600px;
+            border-radius: 3%;
+            border: solid 4px gray;
+            position: relative;
+        }
+        .container div{
+            position: absolute;
+            margin-left: 23%;
+            display: flex;
+            flex-direction: column;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+        <h1> CM TO INCH VALUE</h1>
+<label for="">CM VALUE</label>
+<input type="text" placeholder="enter a cm value">
+<br>
+        
+             <button>
+                PRESS ME FOR INCH VALUE
+
+        </button>
+
+        <div>
+              <h2 id="inchs"></h2>
+        </div>
+    </div></div>
+    <script>
+        let cmval=Number( document.getElementById("cm").value)
+         let inch=cmval/2.78
+         
+    </script>
+</body>
+</html>
