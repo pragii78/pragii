@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{ display: grid;align-items: center;justify-content: center;height: 100vh;margin: 0;overflow: hidden
+            ;}
+            .container{display: flex;width: 100vh;}
+            .panel{background-size: auto 100%;background-position: center;background-repeat: no-repeat;height: 80vh;width: 80vw;color: aliceblue;flex: 0.5;margin: 10px;position: relative;transition: flex 0.7s ease-in}
+            .panel h3{font-size: 25px;position: absolute;bottom: 20px;left: 20px;margin: 0;opacity: 0;}
+            .panel.active{flex: 10;}
+            .panel.active h3{opacity: 1;transition: opacity 0.7s ease-in 0.4s;}
+            .heading{text-align: center;margin: 1rem 0 0}
+            .desc{text-align: center;color: gray;margin: 0 0 2rem}
+            @media(max-width:480px){
+                .container{width: 100vw}
+                .panel:nth-of-type(4),
+                .panel:nth-of-type(5){display: none;}
+
+            }
+    </style>
+</head>
+<body>
+    
+    <h1 class="heading"> expanding cards</h1>
+    <p class="desc">click on the next card</p>
+    <div class="container">
+    <div class="panel active" style="background-color: aqua ;">
+    <h3>apple iphone</h3></div>
+
+    <div class="panel " style="background-color: blue">
+        <h3>gayaa</h3></div>
+    
+        <div class="panel " style="background-color: blueviolet;">
+            <h3>pragii</h3></div>
+            
+            <div class="panel " style="background-color: rgb(43, 177, 226);">
+                <h3>pragii</h3></div>
+        
+                <div class="panel " style="background-color: rgb(86, 191, 16);">
+                    <h3>pragii</h3></div>
+        
+                    <div class="panel " style="background-color: rgb(49, 15, 222);">
+                        <h3>pragii</h3></div>
+        
+                        <div class="panel " style="background-color: rgba(226, 43, 214, 0.154)43, 226, 0.756);">
+                            <h3>pragii</h3></div>
+        
+                            <div class="panel " style="background-color: rgb(7, 221, 82);">
+                                <h3>pragii</h3></div>
+                            
+                                <div class="panel " style="background-color: rgb(240, 229, 16);">
+                                    <h3>pragii</h3></div>
+                                
+<script>
+const panels=document.querySelectorAll('.panel');
+
+panels.forEach((panel)=>{panel.addEventListener('click',()=>{removeactiveclasses();
+panel.classList.add('active');})})
+
+
+
+function removeactiveclasses(){
+    panels.forEach((panel)=>{panel.classList.remove('active');})
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
